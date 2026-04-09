@@ -1,9 +1,18 @@
 🏏 IPL First Innings Score Prediction
 A Machine Learning project that predicts the first innings final score in an IPL (Indian Premier League) cricket match based on the current match situation — using historical IPL data from 2008 to 2019.
 ---
+
+
+
+
+
 📌 Problem Statement
 Given mid-match information (current over, runs scored, wickets fallen, recent 5-over stats, and the two teams), predict what the batting team's final first-innings score will be.
 ---
+
+
+
+
 📂 Project Structure
 ```
 IPL-Score-Prediction/
@@ -29,6 +38,9 @@ Column	Description
 `wickets_last_5`	Wickets in the last 5 overs
 `total`	Final first-innings score (target)
 ---
+
+
+
 🏟️ Teams Considered
 Only the 8 most consistent IPL teams were included:
 Chennai Super Kings
@@ -44,6 +56,9 @@ Sunrisers Hyderabad
 ```
 Raw Data  →  Data Cleaning  →  Feature Engineering  →  Train/Test Split
     →  Model Training  →  Evaluation  →  Prediction
+
+
+
 ```
 Data Cleaning
 Dropped irrelevant columns: `mid`, `venue`, `batsman`, `bowler`, `striker`, `non-striker`
@@ -55,6 +70,9 @@ One-Hot Encoding applied to `bat_team` and `bowl_team`
 Train set: Seasons 1–9 (2008–2016)
 Test set: Season 10 (2017)
 ---
+
+
+
 🤖 Models Used
 Model	Notes
 Linear Regression	Best performer — used for final predictions
@@ -62,6 +80,8 @@ Decision Tree Regressor	Higher error, prone to overfitting
 Random Forest Regressor	Good but slower
 AdaBoost (Linear base)	Marginal improvement over Linear Regression
 ---
+
+
 📈 Model Evaluation Metrics
 Each model was evaluated using:
 MAE — Mean Absolute Error
@@ -69,13 +89,23 @@ MSE — Mean Squared Error
 RMSE — Root Mean Squared Error
 > **Linear Regression** gave the best results and was selected for predictions.
 ---
+
+
+
 🔮 Sample Predictions
-Match Info	Teams	Predicted Range	Actual Score
+Match Info	Teams	Predicted Range	Actual Score \
+
 Season 11, Match 13 (Apr 2018)	KKR vs DD	190–205	200/9 ✅
+
+
 Season 11, Match 39 (May 2018)	SRH vs RCB	136–151	146/10 ✅
+
 Season 11, Match 50 (May 2018)	MI vs KXIP	176–191	186/8 ✅
+
 Season 12, Match 9 (Mar 2019)	MI vs KXIP	166–181	176/7 ✅
+
 Season 12, Eliminator (May 2019)	DD vs CSK	137–152	147/9 ✅
+
 ---
 🚀 Getting Started
 Prerequisites
@@ -107,17 +137,31 @@ print(f"Predicted score range: {score - 10} to {score + 5}")
 🛠️ Tech Stack
 Tool	Purpose
 Python 3	Core language
+
 Pandas	Data manipulation
+
 NumPy	Numerical computing
-Scikit-learn	ML models
-Matplotlib & Seaborn	Visualization
-Jupyter Notebook	Exploration & prototyping
+
+Scikit-learn
+
+ML models
+
+Matplotlib & Seaborn
+
+Visualization
+
+Jupyter Notebook	
+
+Exploration & prototyping
 ---
+
 📝 Notes
 Predictions are made as a range (`predicted ± 10/+5`) since IPL scores are highly volatile.
 The model is trained on Seasons 1–9 and evaluated on Season 10.
 New teams introduced after Season 9 are not supported.
 ---
+
+
 📄 License
 This project is open-source and available under the MIT License.
 ---
