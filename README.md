@@ -90,7 +90,7 @@ python ipl_score_prediction.py
 ```
 Using the Prediction Function
 ```python
-from ipl_score_prediction import predict_score
+#from ipl_score_prediction import predict_score
 
 score = predict_score(
     batting_team='Mumbai Indians',
@@ -121,9 +121,4 @@ New teams introduced after Season 9 are not supported.
 📄 License
 This project is open-source and available under the MIT License.
 ---
-🙋‍♂️ Author
-Your Name  
-📧 your.email@example.com  
-🔗 LinkedIn | GitHub
----
-> ⭐ If you found this helpful, please give it a star!
+
